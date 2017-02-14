@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>info from database</title>
+</head>
+<body style="background-color: darkgray">
+<table>
+    <tr>
+        <td>id</td>
+        <td>name</td>
+        <td>template</td>
+        <td>content</td>
+        <td>image</td>
+        <td>creation date</td>
+    </tr>
+{% for row in  dbout %}
+    <tr>
+    <td>{{ row.id }}</td>
+    <td>{{ row.name }}</td>
+    <td>{{ row.template }}</td>
+    <td>{{ row.content }}</td>
+    <td>{{ row.image }}</td>
+    <td>{{ row.date }}</td>
+    </tr>
+{% endfor %}
+    {{ go }}
+</table>
+</body>
+</html>
